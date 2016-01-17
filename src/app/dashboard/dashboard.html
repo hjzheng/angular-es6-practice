@@ -1,0 +1,22 @@
+<style>
+  .grid {
+  	height: 342px;
+  }
+</style>
+<div class="row stats-area">
+    <ap-stats number="{{dashboard.totalTaskNum}}" comments="Total Tasks" colour="primary" type="tasks"></ap-stats>
+    <ap-stats number="{{dashboard.doneTaskNum}}" comments="Used Tasks" colour="info" type="check-square"></ap-stats>
+    <ap-stats number="{{dashboard.totalTime}}" comments="Total Time" colour="success" type="clock-o"></ap-stats>
+</div>
+<div class="row">
+        <ap-panel size="6" title="Gulp Task List" icon="fa-table">
+            <div id="grid1" ui-grid="dashboard.gridOptions" class="grid" ui-grid-auto-resize></div>
+        </ap-panel>
+        <ap-panel size="6" title="Gulp Task Chart" icon="fa-bar-chart">
+            <div style="padding:15px;">
+                <canvas id="barChart" class="chart chart-bar" chart-options="dashboard.options" chart-data="dashboard.chartData" chart-labels="dashboard.labels" chart-series="dashboard.series">
+                </canvas>
+            </div>
+        </ap-panel>
+    </div>
+</div>
