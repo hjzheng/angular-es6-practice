@@ -6,6 +6,8 @@
 ```
 npm install
 bower install
+
+gulp serve
 ```
 
 ### [generator-gulp-angular](https://github.com/Swiip/generator-gulp-angular) 技术选择
